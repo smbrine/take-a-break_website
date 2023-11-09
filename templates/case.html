@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/postercase.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/jQuery/jquery-3.6.0.min')}}"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jamietre/ImageMapster/dist/jquery.imagemapster.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <title>{{ poster_name_header }}</title>
+    <script>
+        var base_url = "{{ url_for('static', filename='') }}";
+        var posterName = "{{ poster_name }}";
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="logos">
+            <a href="https://www.akarussia.ru"><img src="{{ url_for('static', filename='resources/icons/logo.png') }}" alt="" class="akar"></a>
+            <a href="https://museumofads.ru"><img src="{{ url_for('static', filename='resources/icons/cva-white.png') }}" alt="" class="cva"></a>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="map-wrap">
+            <map name="poster" class="poster">
+                <area shape="circle" title="button-1"    coords="{{  coords_b1  }}, {{ b_size }}" href="#" alt="button-1"    target="_blank">
+                <area shape="circle" title="button-2"    coords="{{  coords_b2  }}, {{ b_size }}" href="#" alt="button-2"    target="_blank">
+                <area shape="circle" title="button-3"    coords="{{  coords_b3  }}, {{ b_size }}" href="#" alt="button-3"    target="_blank">
+                <area shape="circle" title="button-4"    coords="{{  coords_b4  }}, {{ b_size }}" href="#" alt="button-4"    target="_blank">
+                <area shape="circle" title="button-5"    coords="{{  coords_b5  }}, {{ b_size }}" href="#" alt="button-5"    target="_blank">
+                <img usemap="#poster" src="{{ case_path }}" alt="" class="case-image">
+            </map>
+        </div>
+        <div class="info-button">
+            <img class="'info-button-icon" src="{{ url_for('static', filename='resources/icons/info.png')}}" alt="">
+        </div>
+        <div class="popover" id="popover"></div>
+        <div class="background">
+            <img src="{{ case_path }}" class="background-img" alt="back">
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/postercase.js')}}"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Game</title>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/Pure/snapfit.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/puzzle.js')}}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/puzzle.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="logos">
+        <a href="https://www.akarussia.ru"><img src="{{ url_for('static', filename='resources/icons/logo.png') }}" alt="" class="akar"></a>
+        <a href="https://museumofads.ru"><img src="{{ url_for('static', filename='resources/icons/cva-white.png') }}" alt="" class="cva"></a>
+    </div>
+    <div class="puzzle">
+        <img class="my_image" id="my_puzzle" src="{{ image_path }}" alt="puzzle-image"/>
+    </div>
+</body>
+</html>

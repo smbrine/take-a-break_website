@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Мой плакат" />
+    <meta property="og:description" content="Смотри какой плакат я сделал!" />
+    <meta property="og:image" content="interact.reklama145.ru/{{ img_path_pre }}" />
+    <meta property="og:url" content="https://interact.reklama.ru" />
+    <title>Ваш Постер</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="{{ img_path }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="{{ url_for('static', filename='css/poster.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/poster.css') }}">
+    <script>
+        picPath = '{{ img_path }}'
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="logos">
+            <a href="https://www.akarussia.ru"><img src="{{ url_for('static', filename='resources/icons/logo.png') }}" alt="" class="akar"></a>
+            <a href="https://museumofads.ru"><img src="{{ url_for('static', filename='resources/icons/cva-white.png') }}" alt="" class="cva"></a>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="left-part">
+            <div class="poster-img">
+                <img src="#" id="poster-self" class="poster-self" alt="Poster Image">
+            </div>
+        </div>
+        <div class="right-part">
+            <h1 class="info-hor">ТВОЙ<br>РЕКЛАМНЫЙ<br>ПЛАКАТ</h1>
+            <div class="share-block">
+                <img class="qr-code" style="transform: scale(3); margin-top: 20vh;" src="#"/>
+                <script>
+                    var code = document.querySelector('.qr-code')
+                    url = window.location.href.replace('-kiosk', '')
+                    code.src = `https://qrcode.tec-it.com/API/QRCode?data=${url}`
+                </script>
+            </div>
+        </div>
+    </div>    
+    <script src="{{ url_for('static', filename='js/poster.js')}}"></script>
+</body>
+</html>

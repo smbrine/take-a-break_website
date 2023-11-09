@@ -1,0 +1,224 @@
+
+:root {
+    --font: 'Montserrat', sans-serif;
+    --color-1: rgb(237, 237, 237);
+    --color-2: rgb(197, 90, 17);
+    --vw: 1vw;
+    --vh: 1vh;
+}
+
+html {
+    padding: 0;
+    margin: 0;
+    height: 100dvh;
+    width: 100vw;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--color-2);
+    font-family: var(--font);
+    height: 100dvh;
+    width: 100vw;
+    overflow: hidden;
+    align-items: center;
+    align-content: center;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    width: 100vw;
+    height: 100dvh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+.background-img {
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    flex-direction: column;
+    object-fit: cover;  
+    position: absolute;
+    width: 105%;
+    height: 105%;
+    overflow: hidden;
+    filter: blur(10px);
+}
+
+.wrapper {
+    align-items: center;
+    padding: 0;
+    width: 100vw;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+}
+
+.logos {
+    position: absolute;
+    width: 100vw;
+    height: 7vh;
+    
+    z-index: 10;
+}
+
+.logos a img {
+    width: auto;
+    position: absolute;
+    z-index: 8;
+}
+
+.logos a img.cva {
+    height: 7vh;
+    padding-right: 1.5vw;
+}
+
+.logos a img.akar {
+    height: 2.5vh;
+    padding-top: 2vh;
+    padding-right: min(18vw, 150px);
+
+}
+
+.akar {
+    top: 0; 
+    right: 0; 
+}
+
+.cva {
+    top: 0; 
+    right: 0;
+    padding-right: .5vw;
+}
+
+
+.case-image {
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    display: block;
+    align-self: center;
+    position: relative;
+}
+
+.poster {
+    display: block;
+    align-items: center;
+    align-content: center;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translate(0, 100%);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+.popover {
+    position: absolute;
+    z-index: 10;
+    display: none;
+    width: 100vw;
+    height: 95dvh;
+    margin-top: 5dvh;
+    background-color: var(--color-1);
+    border-top-right-radius: 1.5rem;
+    border-top-left-radius: 1.5rem;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    animation: slideIn .7s ease-in-out;
+}
+
+.popover p {
+    font-size: 5vw;
+    padding-top: 2vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    text-align: left;
+}
+
+.popover img {
+    width: 80vw;
+    height: auto;
+    align-self: center;
+    align-items: center;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+}
+
+.block-horizon {
+    height: 100dvh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.block-horizon-header {
+    color: var(--color-1);
+    font-size: 10vh;
+    padding: 3vh 5vw;
+    z-index: 1;
+    position: absolute;
+}
+
+.rotate-image {
+    color: var(--color-2);
+    height: 50dvh;
+    padding-top: 40vh;
+    position: absolute;
+}
+.popover-cross {
+    position: absolute;
+    right: 3vw;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 10vh;
+}
+
+.popover-content {
+    padding-top: 10vh;
+}
+
+.owl-carousel .owl-item .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 60vh;   */
+}
+
+.owl-carousel .owl-item .item img {
+    max-width: 90vw;
+    height: auto; 
+}
+
+.info-button {
+    position: absolute;
+    bottom: 1dvh;
+    left: 5vw;
+}
+
+.info-button img {
+    width: 10vw;
+    filter: invert();
+}

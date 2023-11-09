@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/get-icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/get-icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/get-icon/favicon-16x16.png">
+    <link rel="manifest" href="/get-icon/site.webmanifest">
+    <link rel="mask-icon" href="/get-icon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/get-icon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/get-icon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <title>145 лет рекламе! Перерыв</title>
+</head>
+<body>
+    <div class="mid-logo">
+        <img src="{{ url_for('static', filename='resources/logo-mid.png') }}" alt="Chaos Logo" class="chaos-logo">
+    </div>
+    <div class="logos">
+        <a href="https://www.akarussia.ru"><img src="{{ url_for('static', filename='resources/icons/logo.png') }}" alt="" class="akar"></a>
+        <a href="https://museumofads.ru"><img src="{{ url_for('static', filename='resources/icons/cva-white.png') }}" alt="" class="cva"></a>
+    </div>
+    <a href="/constructor" class="left-half">
+        <h1 class="create-poster">СОЗДАЙ СВОЙ ПЛАКАТ</h1>
+    </a>
+    <a href="https://reklama145.ru/" class="right-half">
+        <h1 class="visit-exp">ПОСЕТИ ВЫСТАВКУ</h1>
+    </a>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>

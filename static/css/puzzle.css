@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-1: rgb(237, 237, 237);
+    --color-2: rgb(197, 90, 17);
+    --font: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--font);
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-1);
+}
+
+.puzzle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5vw;
+    align-items: center;
+    width: 90vw;
+    height: 100vh;
+}
+
+.my_puzzle_img {
+    align-self: center;
+    width: 80vw;
+}
+
+.my_image {
+    /* width: 80vw; */
+    max-width: 90vw;
+    max-height: 85vh;
+}
+
+.logos {
+    position: absolute;
+    width: 100vw;
+    height: 7vh;
+    background-color: var(--color-2);
+    z-index: 10;
+}
+
+.logos a img {
+    width: auto;
+    position: absolute;
+    z-index: 8;
+}
+
+.logos a img.cva {
+    height: 7vh;
+    padding-right: 1.5vw;
+}
+
+.logos a img.akar {
+    height: 2.5vh;
+    padding-top: 2vh;
+    padding-right: min(15vw, 100px);
+}
+
+.akar {
+    top: 0; 
+    right: 0; 
+}
+
+.cva {
+    top: 0; 
+    right: 0;
+    padding-right: .5vw;
+}
