@@ -41,6 +41,15 @@ def poster_share(url):
                            img_path = base64UrlDecode(url),
                            img_path_pre=base64UrlDecode(url).replace('./', 'static/'))
 
+@app.route('/logo-qr')
+def akar_qr():
+    url = request.args.get('brand')
+    return None
+
+@app.route('/main-kiosk')
+def main_mirror():
+    return render_template('home_view.html')
+
 @app.route('/poster-kiosk/<string:url>')
 def poster_share_kiosk(url):
     return render_template('poster_kiosk.html',
