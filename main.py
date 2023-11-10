@@ -35,6 +35,10 @@ def homepage_kiosk():
 def constructor():
     return render_template('constructor.html')
 
+@app.route('/constructor-kiosk')
+def constructor_kiosk():
+    return render_template('constructor-kiosk.html')
+
 @app.route('/poster/<string:url>')
 def poster_share(url):
     return render_template('poster.html',
