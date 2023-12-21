@@ -1,9 +1,9 @@
-from flask import Flask, jsonify, render_template, request, send_file, send_from_directory, url_for
 import json
 import os
 import random
 from base64 import urlsafe_b64decode
 
+from flask import Flask, jsonify, render_template, request, send_file, send_from_directory, url_for
 
 
 def base64UrlDecode(base64Url):
@@ -52,26 +52,26 @@ def constructor_kiosk():
 def poster_share(url):
     return render_template(
         'poster.html', img_path=base64UrlDecode(url), img_path_pre=base64UrlDecode(url).replace('./', 'static/')
-        )
+    )
 
 
 @app.route('/poster-kiosk/<string:url>')
 def poster_share_kiosk(url):
     return render_template(
         'poster_kiosk.html', img_path=base64UrlDecode(url), img_path_pre=base64UrlDecode(url).replace('./', 'static/')
-        )
+    )
 
 
 @app.route('/puzzle')
 def puzzle():
     images = ["resources/puzzle-img/img1.png", "resources/puzzle-img/img2.jpeg", "resources/puzzle-img/img3.png",
-        "resources/puzzle-img/img4.jpg"]
+              "resources/puzzle-img/img4.jpg"]
 
     image_path = url_for('static', filename=images[random.randint(0, 3)])
 
     return render_template(
         'puzzle.html', image_path=image_path
-        )
+    )
 
 
 @app.route('/open-case/<string:poster_name>')
@@ -92,7 +92,7 @@ def open_poster(poster_name):
             'case.html', case_path=url_for('static', filename=data['case-image-src']), data=data,
             poster_name=poster_name, poster_name_header=p_name_h, coords_info=coords_info, b_size=b_size,
             coords_b1=coords_b1, coords_b2=coords_b2, coords_b3=coords_b3, coords_b4=coords_b4, coords_b5=coords_b5
-            )
+        )
 
 
 @app.route('/button-data')
