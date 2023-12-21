@@ -2,3 +2,4 @@ ssl/
 venv/
 static/resources/posters
 static/resources/cases
+.DS_Store
