@@ -6,9 +6,9 @@ from base64 import urlsafe_b64decode
 from flask import Flask, jsonify, render_template, request, send_file, send_from_directory, url_for
 
 
-def base64UrlDecode(base64Url):
-    padding = b'=' * (4 - (len(base64Url) % 4))
-    decoded_bytes = urlsafe_b64decode(base64Url.encode() + padding)
+def base64UrlDecode(base64url):
+    padding = b'=' * (4 - (len(base64url) % 4))
+    decoded_bytes = urlsafe_b64decode(base64url.encode() + padding)
     return decoded_bytes.decode()  # Convert bytes to string
 
 
